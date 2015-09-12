@@ -13,7 +13,7 @@ input {
 	border-style: outset;
 }
 
-#squares div {
+.squares div {
 	border-radius: 10px;
     display: block;
     float: left;
@@ -25,18 +25,21 @@ input {
     align:center;
 }
 
-.riskFactorOne {
+#one {
 	background: #2ecc71;
 }
 
-.riskFactorTwo {
+#two {
 	background: #f1c40f;
 }
 
-.riskFactorThree {
+#three{
 	background: #e67e22;
 }
 
-.riskFactorFour {
+#four {
 	background: #e74c3c;
+}
+#whole {
+	background-image: url(http://news.mlh.io/wp-content/uploads/2014/09/MHacks.png);
 }
