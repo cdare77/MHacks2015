@@ -3,10 +3,14 @@
     <div class="page-content">
       <h1 class="header">IOFeed.me</h1>
         <div>
-          <form>
+          <form method="post">
       	   Please Enter Your Zip Code: <br>
       	   <input type="text" name="zip">
       	   <input type="submit" value="Submit">
+           <?php
+              $var = $_POST['zip'];
+              print(zip);
+           ?>
           </form>
       </div>
     </div>
