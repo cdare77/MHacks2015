@@ -13,8 +13,7 @@ data =  {
                     "ColumnNames": ["CHSI_County_Name", "CHSI_State_Name", "Obesity_Category"],
                     "Values": [ [ "Fairfax", "Virginia", "" ], [ "Fairfax", "Virginia", "" ], ]
                 },        },
-            "GlobalParameters": {
-}
+            "GlobalParameters": {}
     }
 
 body = str.encode(json.dumps(data))
@@ -33,7 +32,9 @@ try:
     # response = urllib.request.urlopen(req)
 
     result = response.read()
-    print(result) 
+    parsed_result = json.loads(result)
+    real_result = parsed_result["Results"]["output1"]["value"]["Values"][0][-1]
+    print(real_result)
 except urllib2.HTTPError, error:
     print("The request failed with status code: " + str(error.code))
 
