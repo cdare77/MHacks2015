@@ -3,6 +3,8 @@ import urllib2
 
 import json 
 
+state = raw_input('Enter your state: ')
+county = raw_input('Enter your county: ')
 
 data =  {
 
@@ -11,7 +13,7 @@ data =  {
                 "input1":
                 {
                     "ColumnNames": ["CHSI_County_Name", "CHSI_State_Name", "Obesity_Category"],
-                    "Values": [ [ "Fairfax", "Virginia", "" ], [ "Fairfax", "Virginia", "" ], ]
+                    "Values": [ [ county, state, "" ], [ county, state, "" ], ]
                 },        },
             "GlobalParameters": {}
     }
