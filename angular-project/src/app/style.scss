@@ -2,9 +2,6 @@
   text-align: center; 
   color: rgb(232, 218, 26);
 }
-body {
-	background-image: url(http://news.mlh.io/wp-content/uploads/2014/09/MHacks.png);
-}
 form {
 	color: rgb(232, 218, 26);
 	text-align: center;
@@ -12,11 +9,55 @@ form {
 input {
 	border-style: outset;
 }
-
-.squares div {
+.page-content {
+	background-image: url(http://news.mlh.io/wp-content/uploads/2014/09/MHacks.png);
+}
+#one:hover {
+	background: #b2ffb2;
+}
+#one{
+	margin-left: 10cm;
+	background: #2ecc71;
 	border-radius: 10px;
     display: block;
     float: left;
+    text-align: center;
+
+    width: 150px;
+    height: 150px;
+    font: 30px Georgia;
+
+    margin-right: 5px;
+    align:center;
+}
+#two:hover {
+	background: #ffff99;
+}
+#two{
+	background: #f1c40f;
+	border-radius: 10px;
+    display: block;
+    float: left;
+    text-align: center;
+
+    width: 150px;
+    height: 150px;
+    font: 30px Georgia;
+
+    margin-right: 5px;
+    align:center;
+}
+#three:hover {
+	background: #ffb870;
+}
+#three{
+	background: #e67e22;
+	border-radius: 10px;
+    display: block;
+    float: left;
+    text-align: center;
+    font: 30px Georgia;
+
 
     width: 150px;
     height: 150px;
@@ -24,22 +65,30 @@ input {
     margin-right: 5px;
     align:center;
 }
-
-#one {
-	background: #2ecc71;
+#four:hover {
+	background: #ff9999;
 }
-
-#two {
-	background: #f1c40f;
-}
-
-#three{
-	background: #e67e22;
-}
-
-#four {
+#four{
 	background: #e74c3c;
+	border-radius: 10px;
+    display: block;
+    float: left;
+    text-align: center;
+    font: 30px Georgia;
+
+    width: 150px;
+    height: 150px;
+
+    margin-right: 5px;
+    align:center;
 }
-#whole {
-	background-image: url(http://news.mlh.io/wp-content/uploads/2014/09/MHacks.png);
+p{
+ 	color: rgb(232, 218, 26);
+	margin-left: 21cm;
+	font: 40px Verdana;
+	font-style: bold oblique;
+}
+#solutions {
+    font: 40px Verdana;
+    color: rgb(232, 218, 26);
 }
