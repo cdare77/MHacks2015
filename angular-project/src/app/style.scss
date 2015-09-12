@@ -16,3 +16,30 @@ form {
 input {
 	border-style: outset;
 }
+
+#squares div {
+    display: block;
+    float: left;
+
+    width: 150px;
+    height: 150px;
+
+    margin-right: 5px;
+    align:center;
+}
+
+.riskFactorOne {
+	background: green;
+}
+
+.riskFactorTwo {
+	background: yellow;
+}
+
+.riskFactorThree {
+	background: orange;
+}
+
+.riskFactorFour {
+	background: red;
+}
