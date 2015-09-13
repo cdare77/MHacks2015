@@ -9,7 +9,12 @@
 
   /** @ngInject */
   function ResultsController($routeParams, $http) {
+
     var vm = this;
+
+    vm.goBack = function() {
+      window.history.back();
+    }
 
     vm.zip = $routeParams.zip;
 
