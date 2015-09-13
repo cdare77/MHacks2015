@@ -26,28 +26,32 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Extreme Risk",
       "bold": true,
-      "x": 580,
+      "size": 40,
+      "x": 475,
       "y": 500,
       "color": "#000000"
     },
     {
       "text": "High Risk",
+      "size": 30,
       "bold": true,
-      "x": 580,
+      "x": 540,
       "y": 275,
       "color": "#000000"
     },
     {
       "text": "Medium Risk",
+      "size": 25,
       "bold": true,
-      "x": 580,
+      "x": 530,
       "y": 140,
-      "color": "#000000"
+      "color": "#000000",
     },
     {
       "text": "Low Risk",
+      "size": 18,
       "bold": true,
-      "x": 590,
+      "x": 580,
       "y": 45,
       "color": "#000000"
     }
