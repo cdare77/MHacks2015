@@ -1,14 +1,67 @@
 console.log("Hello world");
 
-jQuery.ajax( {
-    url: "http://api.walmartlabs.com/v1/search?query=bottled+water&format=json&apiKey=f9e8tfetpv3r64c6ewzjtkrt",
-    type: 'GET',
-    data: { content: 'testing test' },
-    beforeSend : function( xhr ) {
-        xhr.setRequestHeader( "X-Originating-Ip", "35.0.122.37");
-    },
-    success: function( response ) {
-        // response
-        console.log(response.Items[0].salePrice);
+function food(name, price) {
+    this.name = name;
+    this.price = price;
+}
+
+var tier4 = [new food("Vegetables", 0.0), new food("Whole Grain Bread", 0.0), 
+    new food("Skim Milk", 0.0), new food("Fruit", 0.0), new food("Lean Cuisine", 0.0)];
+
+var tier3 = [new food("Fish", 0.0), new food("Low Fat Milk", 0.0), new food("Fruit", 0.0)];
+
+var tier2 = [new food("Poultry", 0.0), new food("Nuts", 0.0), new food("White Bread", 0.0)];
+
+var tier1 = [new food("Red Meat", 0.0), new food("Whole Milk", 0.0)];
+
+function findPrice(food) {
+    jQuery.ajax( {
+        url: "http://api.walmartlabs.com/v1/search?query=" + food.name.replace(" ", "+") + "&format=json&apiKey=f9e8tfetpv3r64c6ewzjtkrt",
+        type: 'GET',
+        data: { content: 'testing test' },
+        beforeSend : function(xhr) {
+            xhr.setRequestHeader( "X-Originating-Ip", "35.0.122.37");
+        },
+        success: function( response ) {
+            if (response.hasOwnProperty('items')) {
+                food.price = response.items[0].salePrice;
+            }
+            else {
+                food.price = -1;
+            }
+        }
+    });
+}
+
+function findPrices(array){
+    for (var i = 0; i < array.length; i ++) {
+        findPrice(array[0]);
     }
-} );
+}
+
+findPrices(tier4);
+findPrices(tier3);
+findPrices(tier2);
+findPrices(tier1);
+//tier 1
+//red meat
+//whole milk
+
+//tier 2
+//poultry
+//nuts
+//white bread
+
+//tier 3
+//Fish
+//Low fat milk
+//Juice
+//Fruits
+
+//Tier 4
+//Vegetables
+//Whole grain bread
+//Fat-free milk
+//Bottled wadwater
+//Fruits
+//Lean cuisine
