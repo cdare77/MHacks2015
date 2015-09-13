@@ -1,5 +1,3 @@
-console.log("Hello world");
-
 function food(name, price) {
     this.name = name;
     this.price = price;
@@ -36,7 +34,7 @@ function findPrice(food) {
 function findPrices(array){
     for (var i = 0; i < array.length; i ++) {
         findPrice(array[0]);
-        setTimeout(100);
+        setTimeout(200);
     }
 }
 
@@ -50,6 +48,11 @@ tier2 = tier2.concat(tier3);
 tier1 = tier1.concat(tier2);
 
 console.log(tier1.length);
+
+$( "div.demo-container" ).html(function(){
+    return "hi";
+
+});
 //tier 1
 //red meat
 //whole milk
