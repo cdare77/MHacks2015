@@ -5,10 +5,10 @@
 
   angular
     .module('angularProject')
-    .controller('ResultsController', ['$routeParams', '$http', ResultsController]);
+    .controller('ResultsController', ['$routeParams', '$http', '$location', ResultsController]);
 
   /** @ngInject */
-  function ResultsController($routeParams, $http) {
+  function ResultsController($routeParams, $http, $location) {
 
     var vm = this;
 
@@ -47,8 +47,6 @@
           headers: vm.post_headers,
           data: vm.data
         }
-
-        console.log(vm.post_headers);
         
         // $.ajax({
         //     method: "POST",
@@ -86,7 +84,11 @@
               vm.res_caption = "You're Chris Dare quality fam";
               break;
           }
-        })
+        });
+
+        vm.goToSuggestions = function() {
+          $location.path('/suggestions').search({risk: vm.response});
+        }
   
       });
   }
