@@ -7,10 +7,10 @@
 
   angular
     .module('angularProject')
-    .controller('SuggestionsController', ['$location', '$routeParams', SuggestionsController]);
+    .controller('SuggestionsController', ['$location', '$routeParams', '$timeout', SuggestionsController]);
 
   /** @ngInject */
-  function SuggestionsController($location, $routeParams) {
+  function SuggestionsController($location, $routeParams, $timeout) {
     var vm = this;
 
     vm.risk = $routeParams.risk;
@@ -66,26 +66,40 @@
     switch(vm.risk) {
         case "Low Risk":
             findPrices(tier1);
-            vm.items = tier1;
             break;
         case "Medium Risk":
             findPrices(tier2);
-            vm.items = tier2;
             break;
         case "High Risk":
             findPrices(tier3);
-            vm.items = tier3;
             break;
         case "Extreme Risk":
             findPrices(tier4);
-            vm.items = tier4;
             break;
         default:
             findPrices(tier2);
-            vm.items = tier2;
-    }
+    };
 
-    console.log(vm.items);
+    $timeout(function() {
+        switch(vm.risk) {
+            case "Low Risk":
+                vm.items = tier1;
+                break;
+            case "Medium Risk":
+                vm.items = tier2;
+                break;
+            case "High Risk":
+                vm.items = tier3;
+                break;
+            case "Extreme Risk":
+                vm.items = tier4;
+                break;
+            default:
+                vm.items = tier2;
+        };
+        console.log(vm.items);
+    }, 5000);
    
   }
 })();
+z
