@@ -9,6 +9,7 @@ jQuery.ajax( {
     },
     success: function( response ) {
         // response
+        console.log(response);
         console.log(response.Items[0].salePrice);
     }
 } );
