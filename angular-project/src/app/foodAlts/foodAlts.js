@@ -36,6 +36,7 @@ function findPrice(food) {
 function findPrices(array){
     for (var i = 0; i < array.length; i ++) {
         findPrice(array[0]);
+        setTimeout(100);
     }
 }
 
@@ -43,6 +44,12 @@ findPrices(tier4);
 findPrices(tier3);
 findPrices(tier2);
 findPrices(tier1);
+
+tier3 = tier3.concat(tier4);
+tier2 = tier2.concat(tier3);
+tier1 = tier1.concat(tier2);
+
+console.log(tier1.length);
 //tier 1
 //red meat
 //whole milk
