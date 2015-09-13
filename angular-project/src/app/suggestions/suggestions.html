@@ -1,3 +1,24 @@
-<!-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
-<div id="chartdiv"> Text </div>
-{{suggestions.risk}}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <main class="mdl-layout__content">
+    <h1 class="header">You should eat</h1>
+    <div class="suggestion-content">
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Food</th>
+          <th>Unit price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="foodItem in suggestions.items">
+          <td class="mdl-data-table__cell--non-numeric">{{foodItem.name}}</td>
+          <td>${{foodItem.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+  </main>
+</div>
+
+
