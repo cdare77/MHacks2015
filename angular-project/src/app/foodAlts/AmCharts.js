@@ -26,6 +26,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Extreme Risk",
       "bold": true,
+      "url": "suggestions.html",
       "size": 40,
       "x": 475,
       "y": 500,
@@ -34,6 +35,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "High Risk",
       "size": 30,
+      "url": "suggestions.html",
       "bold": true,
       "x": 540,
       "y": 275,
@@ -42,6 +44,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Medium Risk",
       "size": 25,
+      "url": "suggestions.html",
       "bold": true,
       "x": 530,
       "y": 140,
@@ -50,6 +53,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Low Risk",
       "size": 18,
+      "url": "suggestions.html",
       "bold": true,
       "x": 580,
       "y": 45,
