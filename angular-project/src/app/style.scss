@@ -1,3 +1,39 @@
 .header {
   text-align: center; 
 }
+
+.zip-form {
+  display: flex;
+  justify-content: center;
+}
+
+.page-content {
+  height: 100vh;
+}
+
+.low {
+  background-color: #2ecc71;
+}
+
+.med { 
+  background-color: #f1c40f;
+}
+
+.high {
+  background-color: #e67e22;
+}
+
+.extreme {
+  background-color: #c0392b;
+}
+
+.result {
+  font-size: 200px !important;
+  color: #ecf0f1;
+}
+
+.result-caption {
+  font-size: 100px !important;
+  line-height: 100px;
+  color: #ecf0f1;
+}
