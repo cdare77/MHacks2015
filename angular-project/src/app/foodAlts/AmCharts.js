@@ -34,7 +34,10 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "High Risk",
       "size": 30,
+<<<<<<< HEAD
       "url": "",
+=======
+>>>>>>> a76bd7de4411fcf0fe5b2713acecd8366678509e
       "bold": true,
       "x": 540,
       "y": 275,
@@ -43,7 +46,10 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Medium Risk",
       "size": 25,
+<<<<<<< HEAD
       "url": "",
+=======
+>>>>>>> a76bd7de4411fcf0fe5b2713acecd8366678509e
       "bold": true,
       "x": 530,
       "y": 140,
@@ -52,7 +58,10 @@ var chart = AmCharts.makeChart( "chartdiv", {
     {
       "text": "Low Risk",
       "size": 18,
+<<<<<<< HEAD
       "url": "",
+=======
+>>>>>>> a76bd7de4411fcf0fe5b2713acecd8366678509e
       "bold": true,
       "x": 580,
       "y": 45,
@@ -66,3 +75,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "enabled": true
   }
 } );
+
+$( "#chartdiv" ).click(function() {
+  console.log( "Works!" );
+});
