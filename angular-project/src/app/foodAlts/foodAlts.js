@@ -22,6 +22,9 @@ function findPrice(food) {
         },
         success: function( response ) {
             if (response.hasOwnProperty('items')) {
+                console.log(food.name);
+                console.log(response.items[0].name)
+                console.log(response.items[0].salePrice);
                 food.price = response.items[0].salePrice;
             }
             else {
@@ -47,31 +50,41 @@ tier3 = tier3.concat(tier4);
 tier2 = tier2.concat(tier3);
 tier1 = tier1.concat(tier2);
 
-console.log(tier1.length);
+var tier = 1; //placeholder to be passed through the url
 
-$( "div.demo-container" ).html(function(){
-    return "hi";
+function indToHTML(item){
+    return "Name: " + item.name + " Price: " + item.price + "<br>";
+}
 
-});
-//tier 1
-//red meat
-//whole milk
+function toHTML(){
+    var text = "";
+    switch (tier) {
+    case 1:
+        for (var i = 0; i < tier1.length; i++) {
+            text += indToHTML(tier1[i]);
+        }
+        $( "#one" ).html(text);
+        break;
+    case 2:
+        for (var i = 0; i < tier2.length; i++) {
+            text += indToHTML(tier2[i]);
+        }
+        $( "#two" ).html(text);
+        break;
+    case 3:
+        for (var i = 0; i < tier3.length; i++) {
+            text += indToHTML(tier3[i]);
+        }
+        $( "#three" ).html(text);
+        break;
+    case 4:
+        for (var i = 0; i < tier4.length; i++) {
+            text += indToHTML(tier4[i]);
+        }
+        $( "#four" ).html(text);
+        break;
+    }
+}
 
-//tier 2
-//poultry
-//nuts
-//white bread
+toHTML();
 
-//tier 3
-//Fish
-//Low fat milk
-//Juice
-//Fruits
-
-//Tier 4
-//Vegetables
-//Whole grain bread
-//Fat-free milk
-//Bottled wadwater
-//Fruits
-//Lean cuisine
