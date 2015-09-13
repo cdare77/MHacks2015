@@ -63,3 +63,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "enabled": true
   }
 } );
+
+$( "#chartdiv" ).click(function() {
+  console.log( "Works!" );
+});
